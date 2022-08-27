@@ -1,0 +1,21 @@
+* {
+    border: solid black 1px;
+}
+
+body {
+    display: flex;
+    height: calc(100vh - 50px);
+    background-color: black;
+    padding: 50px;
+}
+
+#logo-section {
+    background-color: steelblue;
+    background-position: center;
+    width: 30vw;
+}
+
+#form-section {
+    background-color: steelblue;
+    width: 70vw;
+}

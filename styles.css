@@ -1,6 +1,6 @@
-* {
+/* * {
     border: solid black 1px;
-}
+} */
 
 body {
     display: flex;
@@ -10,12 +10,12 @@ body {
 }
 
 #logo-section {
-    background-color: steelblue;
+    background-color: white;
     background-position: center;
     width: 30vw;
 }
 
 #form-section {
-    background-color: steelblue;
+    background-color: white;
     width: 70vw;
 }

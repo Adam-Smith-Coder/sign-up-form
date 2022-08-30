@@ -9,13 +9,13 @@
 </head>
 <body>
     <div id="logo-section">
-        <h1>Generic Estate Agents</h1>
+        <div id="logo">Generic Estate Agents</div>
     </div>
     <div id="form-section">
-        <p>This is not a real property website! Complete the below fields to create an account and start searching for your dream property today!</p>
-        <p>You know you want to</p>
-        <p>Let's start the search</p>
-        <form action="blank" method="post">
+        <p>This is not a real property website! Sign up <em>now</em> using the below form to create an account and start searching for your dream property today!</p>
+        <p>You <em>know</em> you want to.</p>
+        <p>Let's start the search!</p>
+        <form action="blank" method="post" id="myForm">
             <div>
                 <label for="fname">First Name:</label>
                 <input type="text" id="fname" name="first-name" required>
@@ -45,7 +45,7 @@
                 <input type="checkbox" id="mailing" name="mailing-list"> 
             </div>
         </form>
-        <button type="button">Create Account</button>
+        <button type="submit" form="myForm">Create Account</button>
         <p>Already have an account? <a href="">Log in</a></p>
     </div>
 </body>

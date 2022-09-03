@@ -1,6 +1,18 @@
-/* * {
-    border: solid black 1px;
-} */
+* {
+    font-family: "Rajdhani", sans-serif;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color: white;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:white
+  }
+  
+  ::placeholder {
+    color: white
+  }
 
 body {
     display: flex;
@@ -20,7 +32,6 @@ body {
     justify-self: center;
     font-size: 42px;
     animation: flicker 3s infinite;
-    color: #fff;
 }
 
 @keyframes flicker {
@@ -55,7 +66,7 @@ body {
 }
 
 #form-section p:last-of-type {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 form {
@@ -88,6 +99,25 @@ input {
     border-radius: 7px;
     background-color: purple;
     border-color:blueviolet;
+    outline: none;
+}
+
+input:focus {
+    border-radius: 7px;
+    background-color: rgb(255, 0, 242);
+    border-color:rgb(255, 0, 242);
+}
+
+input:valid:not(:placeholder-shown):not(input[type="password"]) {
+    border-radius: 7px;
+    background-color: green;
+    border-color: greenyellow;
+}
+
+input:invalid:not(:placeholder-shown):not(input[type="password"]) {
+    border-radius: 7px;
+    background-color: red;
+    border-color: orangered;
 }
 
 button {
@@ -99,5 +129,14 @@ button {
     color: white;
     padding: 15px 50px;
     text-align: center;
-    margin: 20px 0px;
+    margin: 20px 0px 5px;
+  }
+
+  a {
+    color:rgb(255, 0, 242);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color:rgb(164, 99, 218);
   }

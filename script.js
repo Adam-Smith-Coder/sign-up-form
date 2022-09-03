@@ -8,7 +8,7 @@ let validate = function() {
     if (pass.length < 8) {
         validationMessage.textContent = 'Password not long enough';
 
-    } else if (pass.length > 8 && !regEx.test(pass)) {
+    } else if (pass.length >= 8 && !regEx.test(pass)) {
         validationMessage.textContent = 'The password must contain 8 or more characters and include at least one number, and one uppercase and lowercase letter';
     
     } else {

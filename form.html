@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani">
+    <script src="script.js" defer></script>
     <title>Sign-Up Form</title>
 </head>
 <body>
@@ -13,10 +14,10 @@
         <div id="logo">Generic Website Name</div>
     </div>
     <div id="form-section">
-        <p>This is not a real website! Sign up <em>now</em> using the below form to create an account and start searching for your dream property today!</p>
+        <p>This is not a real website! Sign up <em>now</em> using the below form to create an account and start searching today!</p>
         <p>You <em>know</em> you want to.</p>
         <p>Let's start the search!</p>
-        <form action="blank" method="post" id="myForm">
+        <form action="" id="myForm" autocomplete="off">
             <div>
                 <label for="fname">First Name:</label>
                 <input type="text" id="fname" name="first-name" placeholder="e.g John" required>
@@ -31,16 +32,17 @@
             </div>
             <div>
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone-number" placeholder="e.g 01234567891" required>
+                <input type="tel" id="phone" name="phone-number" placeholder="e.g 01234567891" maxlength="31" required>
             </div>
             <div>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" class="error" required>
+                <input type="password" id="password" name="password" maxlength="8" class="error" onkeyup="validate()" required>
             </div>
             <div>
                 <label for="conf-password">Confirm Password:</label>
-                <input type="password" id="conf-password" class="error" name="confirmed-password" required>
+                <input type="password" id="conf-password" name="confirm-password" class="error" onkeyup="validate()" maxlength="8" required>
             </div>
+            <span id="message"></span>
             <div class="mailing">
                 <label for="mailing">Join our mailing list (optional)</label>
                 <input type="checkbox" id="mailing" name="mailing-list"> 

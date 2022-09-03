@@ -108,13 +108,15 @@ input:focus {
     border-color:rgb(255, 0, 242);
 }
 
-input:valid:not(:placeholder-shown):not(input[type="password"]) {
+input:valid:not(:placeholder-shown):not(input[type="password"]),
+.validPass {
     border-radius: 7px;
     background-color: green;
     border-color: greenyellow;
 }
 
-input:invalid:not(:placeholder-shown):not(input[type="password"]) {
+input:invalid:not(:placeholder-shown):not(input[type="password"]),
+.invalidPass {
     border-radius: 7px;
     background-color: red;
     border-color: orangered;

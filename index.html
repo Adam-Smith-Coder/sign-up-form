@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani">
+    <script src="script.js" defer></script>
+    <title>Sign-Up Form</title>
+</head>
+<body>
+    <div id="logo-section">
+        <div id="logo">Generic Website Name</div>
+    </div>
+    <div id="form-section">
+        <p>This is not a real website! Sign up <em>now</em> using the below form to create an account and start searching today!</p>
+        <p>You <em>know</em> you want to.</p>
+        <p>Let's start the search!</p>
+        <form action="" id="myForm" autocomplete="off">
+            <div>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="first-name" placeholder="e.g John" required>
+            </div>
+            <div>
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="last-name" placeholder="e.g Smith" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="e.g example@mail.com" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone-number" placeholder="e.g 01234567891" maxlength="31" required>
+            </div>
+            <span>The password must contain 8 or more characters and include at least one number, one uppercase  letter, one lowercase letter and a symbol</span>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" minlength="8" maxlength="20" class="error" onblur="validate()" required>
+            </div>
+            <div>
+                <label for="conf-password">Confirm Password:</label>
+                <input type="password" id="conf-password" name="confirm-password" class="error" onblur="validate()" minlength="8" maxlength="20" required>
+            </div>
+            <span id="validation-message"></span>
+        </form>
+        <button type="submit" form="myForm">Create Account</button>
+        <p>Already have an account? <a href="">Log in</a></p>
+    </div>
+</body>
+</html>

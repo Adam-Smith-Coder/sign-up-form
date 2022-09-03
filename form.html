@@ -34,19 +34,16 @@
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone-number" placeholder="e.g 01234567891" maxlength="31" required>
             </div>
+            <span>The password must contain 8 or more characters and include at least one number, one uppercase  letter, one lowercase letter and a symbol</span>
             <div>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" maxlength="8" class="error" onkeyup="validate()" required>
+                <input type="password" id="password" name="password" minlength="8" maxlength="20" class="error" onblur="validate()" required>
             </div>
             <div>
                 <label for="conf-password">Confirm Password:</label>
-                <input type="password" id="conf-password" name="confirm-password" class="error" onkeyup="validate()" maxlength="8" required>
+                <input type="password" id="conf-password" name="confirm-password" class="error" onblur="validate()" minlength="8" maxlength="20" required>
             </div>
-            <span id="message"></span>
-            <div class="mailing">
-                <label for="mailing">Join our mailing list (optional)</label>
-                <input type="checkbox" id="mailing" name="mailing-list"> 
-            </div>
+            <span id="validation-message"></span>
         </form>
         <button type="submit" form="myForm">Create Account</button>
         <p>Already have an account? <a href="">Log in</a></p>
